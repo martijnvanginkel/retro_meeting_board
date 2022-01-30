@@ -1,0 +1,7 @@
+.card-score {
+    display: flex;
+    gap: 5px;
+    height: 15px;
+    cursor: default;
+    width: 100%;
+}

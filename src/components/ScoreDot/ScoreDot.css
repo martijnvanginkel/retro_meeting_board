@@ -1,0 +1,21 @@
+.filled-dot {
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.empty-dot {
+    background-color: gray;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.selected-dot {
+    background-color: darkgray;
+    height: 13px;
+    width: 13px;
+    border: 1px solid black;
+    border-radius: 50%;
+}

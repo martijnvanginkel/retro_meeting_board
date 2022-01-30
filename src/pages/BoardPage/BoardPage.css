@@ -1,0 +1,29 @@
+.container {
+    padding: 5px;
+    min-width: 768px;
+    max-width: 1280px;
+}
+
+.columns-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 100vh;
+    margin-top: 5px;
+    overflow-y: scroll;
+}
+
+.column {
+    width: 100%;
+}
+
+.column-header {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

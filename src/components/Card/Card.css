@@ -1,0 +1,18 @@
+.card {
+    background-color: white;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 2px;
+    word-break: break-word;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.description {
+    height: 50px;
+    width: 100%; 
+}
+
