@@ -22,9 +22,9 @@ function useCards() {
         await new Promise(resolve => setTimeout(resolve, 0))
 
         const fetchedCards = [
-            { description: 'Lorem ipsum dolor sit amet', score: 0, category: 'Good' },
-            { description: 'asdfsdafasdfs', score: 0, category: 'Good' },
-            { description: 'Lorem sit', score: 0, category: 'Good' }
+            { description: 'Example card 1', score: 0, category: 'Good' },
+            { description: 'Example card 2', score: 0, category: 'Good' },
+            { description: 'Example card 3', score: 0, category: 'Good' }
         ]
         setCards(fetchedCards)
     }
