@@ -6,6 +6,7 @@ interface Props {
     score: number
     onDragStart: () => void
     onDragEnd: () => void
+    onChangedScore: (newScore: number) => void
 }
 
 const Card: React.FC<Props> = ({
@@ -13,6 +14,7 @@ const Card: React.FC<Props> = ({
     score,
     onDragStart,
     onDragEnd,
+    onChangedScore
 }) => {
 
     return (
@@ -22,7 +24,7 @@ const Card: React.FC<Props> = ({
             onDragEnd={onDragEnd}
             >
                 <div className="description">{description}</div>
-                <CardScore startScore={score} />
+                <CardScore score={score} onChangedScore={onChangedScore} />
         </div>
     )
 }

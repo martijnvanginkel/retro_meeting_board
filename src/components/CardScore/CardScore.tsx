@@ -3,16 +3,16 @@ import ScoreDot, { DotType } from '../ScoreDot/ScoreDot';
 import './CardScore.css';
 
 interface Props {
-    startScore: number
+    score: number
+    onChangedScore: (newScore: number) => void
 }
 
 const maxScore = 4
 
 const CardScore: React.FC<Props> = ({
-    startScore
+    score,
+    onChangedScore
 }) => {
-
-    const [score, setScore] = useState<number>(startScore)
     const [hoverAt, setHoverAt] = useState<number>(0)
     const [inEditMode, setInEditMode] = useState<boolean>(false)    
 
@@ -54,11 +54,11 @@ const CardScore: React.FC<Props> = ({
                 onMouseEnter={() => setHoverAt(index + 1)}
                 onClick={() => {
                     if (index + 1 === score) {
-                        setScore(0)
+                        onChangedScore(0)
                         setInEditMode(false)
                         return
                     }
-                    setScore(index + 1)
+                    onChangedScore(index + 1)
                 }}
             />
         )

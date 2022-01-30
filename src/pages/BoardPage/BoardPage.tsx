@@ -19,6 +19,8 @@ const BoardPage: React.FC = () => {
 		return renderError()
 	}
 
+	console.log(data.cards)
+
 	return (
 		<div className="container">
 			<CreateCardBox onCardCreated={(description) => actions.addCard(description)} />
@@ -69,6 +71,7 @@ const BoardPage: React.FC = () => {
 						key={index}
 						description={card.description}
 						score={card.score}
+						onChangedScore={(newScore) => actions.changeCardScore(card, newScore)}
 						onDragStart={() => actions.setDraggingCard(card)}
 						onDragEnd={() => actions.setDraggingCard(undefined)}
 					/>

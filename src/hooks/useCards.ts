@@ -48,6 +48,16 @@ function useCards() {
         setCards(copy)
     }
 
+    function changeCardScore(card: CardData, newScore: number) {
+        const copy = [...cards]
+        const find = copy.find(c => c === card)
+        if (!find) {
+            return
+        }
+        find.score = newScore
+        setCards(copy)
+    }
+
     function setCardAtNewIndex(newIndex: number, columnCards: CardData[]) {
         if (!draggingCard) {
             return
@@ -67,7 +77,7 @@ function useCards() {
 
     return {
         data: { loading, error, cards },
-        actions: { addCard, setDraggingCard, changeCardColumn, setCardAtNewIndex }
+        actions: { addCard, setDraggingCard, changeCardColumn, changeCardScore, setCardAtNewIndex }
     }
 }
 
